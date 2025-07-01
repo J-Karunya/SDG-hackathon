@@ -1,0 +1,152 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Color Palette */
+:root {
+    --bg-color: #FFFFFA;
+    --primary-color: #6D213C;
+    --accent-color: #A18276;
+    --text-color: #1C3041;
+    --muted-color: #868784;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styling */
+header {
+    background-color: #1C3041; /* Dark background */
+    color: #FFFFFA; /* Light text */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Outer box effect */
+    margin: 20px;
+}
+
+/* Logo Styling */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Navigation Styling */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+/* General Link Styling */
+nav ul li a {
+    text-decoration: none;
+    color: #FFFFFA;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: 2px solid transparent; /* Transparent border initially */
+}
+
+/* Active & Hover Effect for All Links */
+nav ul li a:hover,
+nav ul li a.active,
+.profile-btn:hover {
+    background-color: #6D213C; /* Highlight color */
+    border-color: #FFFFFA; /* White border */
+    box-shadow: 0 0 8px rgba(255, 255, 250, 0.6); /* Outer box effect */
+}
+
+/* Profile Button Styling */
+.profile-btn {
+    background-color: #A18276;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+/* Profile Button Hover Effect */
+.profile-btn:hover {
+    background-color: #868784;
+}
+
+
+/* Main Section */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    color: var(--primary-color);
+}
+
+.subjects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.subject-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.subject-card:hover {
+    transform: translateY(-5px);
+}
+
+.progress-bar {
+    background: var(--muted-color);
+    height: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: var(--primary-color);
+    transition: width 0.5s ease;
+}
+
+.details-link {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    background: var(--primary-color);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+    position: relative;
+}
+
+.details-link:hover {
+    background: var(--accent-color);
+}
+
+/* Pop-up effect on click */
+.details-link:active {
+    transform: scale(0.9);
+}
+

@@ -1,0 +1,180 @@
+/* Teacher Profile Styling */
+:root {
+    --off-white: #FFFFFA;
+    --deep-red: #6D213C;
+    --muted-brown: #A18276;
+    --dark-blue: #1C3041;
+    --muted-gray: #868784;
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--off-white);
+    color: var(--dark-blue);
+}
+
+/* Navigation Bar */
+.hero {
+    background-color: var(--deep-red);
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.hero nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.hero h1 {
+    color: var(--off-white);
+    font-size: 24px;
+}
+
+.hero ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.hero ul li {
+    margin: 0 10px;
+}
+
+.hero ul li a {
+    text-decoration: none;
+    color: var(--off-white);
+    background-color: var(--muted-brown);
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.hero ul li a:hover {
+    background-color: var(--muted-gray);
+}
+
+/* Stats Container */
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+.stat-box {
+    background: var(--muted-gray);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 200px;
+}
+
+.stat-box p {
+    font-size: 14px;
+    color: var(--dark-blue);
+}
+
+.stat-box h3 {
+    font-size: 24px;
+    color: var(--deep-red);
+}
+
+.stat-box .positive {
+    color: #4CAF50; /* Green for positive growth */
+}
+
+/* Chart Container */
+.chart-container {
+    margin: 40px auto;
+    text-align: center;
+}
+
+.chart-container h2 {
+    color: var(--deep-red);
+    font-size: 28px;
+}
+
+/* Areas Container */
+.areas-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    margin-top: 40px;
+}
+
+.weak-areas, .strong-areas {
+    width: 48%;
+}
+
+h2 {
+    color: var(--deep-red);
+    font-size: 24px;
+}
+
+/* Progress Bars */
+.bar {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bar span {
+    font-size: 16px;
+    color: var(--dark-blue);
+}
+
+.progress {
+    height: 20px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+}
+
+.red {
+    background-color: #f44336;
+    color: white;
+}
+
+.orange {
+    background-color: #ff9800;
+    color: white;
+}
+
+.yellow {
+    background-color: #ffeb3b;
+    color: black;
+}
+
+.green {
+    background-color: #4caf50;
+    color: white;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: var(--deep-red);
+    color: var(--off-white);
+}
+
+/* Links */
+p a {
+    color: var(--muted-brown);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+p a:hover {
+    text-decoration: underline;
+}

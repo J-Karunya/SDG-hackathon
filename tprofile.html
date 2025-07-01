@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Profile</title>
+    <link rel="stylesheet" href="tprofile.css">
+</head>
+<body>
+    <header class="hero">
+        <nav>
+            <h1>Dashboard</h1>
+            <ul>
+                <li><a href="home page1.html">Home</a></li>
+                <li><a href="login.html">Logout</a></li>
+                <li><a href="mocktest.html">Mock Test</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="profile-container">
+        <h2 class="profile-title">Teacher Profile</h2>
+    
+        <form action="profile-update.php" method="POST">
+            <div class="profile-section">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" value="<?php echo $name; ?>" required>
+            </div>
+    
+            <div class="profile-section">
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" name="phone" value="+91 98765 43210" required>
+            </div>
+    
+            <div class="profile-section">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" value="john.doe@example.com" required>
+            </div>
+
+            <div class="profile-section">
+                <label for="teacher-id">Teacher ID</label>
+                <input type="text" id="teacher-id" name="teacher-id" value="TCH12345" required>
+            </div>
+    
+            <div class="profile-section">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" value="johndoe_t" required>
+            </div>
+    
+            <button class="logout-btn" type="submit">Save Changes</button>
+        </form>
+        
+        <p class="logout-info">Chat history on this computer will be cleared when you log out.</p>
+    </div>
+</body>
+</html>
+

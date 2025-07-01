@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Exam Tracker</title>
+    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="progress.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="leaderboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="hero">
+        <nav>
+            <h1>Dashboard</h1>
+            <ul>
+                <li><a href="home page1.html">Home</a></li>
+                <li><a href="login.html">Logout</a></li>
+                <li><a href="mocktest.html">mocktest</a></li>
+                <li><a href="profile.html" class="profile-btn">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="dashboard-container">
+        <!-- Progress Section -->
+        <section class="progress-section">
+            <h2 class="section-title">📊 Progress Overview</h2>
+            <div class="stats-container">
+                <div class="stat-box">
+                    <p>Current Score</p>
+                    <h3>85/100</h3>
+                    <span class="positive">+8%</span>
+                </div>
+                <div class="stat-box">
+                    <p>Target Score</p>
+                    <h3>90/100</h3>
+                    <span>5 points to go</span>
+                </div>
+                <div class="stat-box">
+                    <p>Study Time</p>
+                    <h3>156 hrs</h3>
+                    <span class="positive">+24 hrs this week</span>
+                </div>
+            </div>
+            <div class="chart-container">
+                <h3 class="chart-title">Performance Trend</h3>
+                <div class="performance">
+                    <canvas id="performanceChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Weak & Strong Areas Section -->
+        <div class="areas-container">
+            <div class="weak-areas">
+                <h2>Weak Areas</h2>
+                <div class="bar">
+                    <span>Theory of Computation</span>
+                    <div class="progress red" style="width: 40%;">40%</div>
+                </div>
+                <div class="bar">
+                    <span>Computer Organization</span>
+                    <div class="progress orange" style="width: 45%;">45%</div>
+                </div>
+                <div class="bar">
+                    <span>Compiler Design</span>
+                    <div class="progress yellow" style="width: 52%;">52%</div>
+                </div>
+            </div>
+            
+            <div class="strong-areas">
+                <h2>Strong Areas</h2>
+                <div class="bar">
+                    <span>Programming</span>
+                    <div class="progress green" style="width: 85%;">85%</div>
+                </div>
+                <div class="bar">
+                    <span>Data Structures</span>
+                    <div class="progress green" style="width: 82%;">82%</div>
+                </div>
+                <div class="bar">
+                    <span>Operating Systems</span>
+                    <div class="progress green" style="width: 78%;">78%</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Leaderboard Section -->
+        <section class="leaderboard-section">
+            <h2 class="section-title">🏆 Leaderboard</h2>
+            <table class="leaderboard">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Name</th>
+                        <th>Score</th>
+                        <th>Exams Completed</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="gold">
+                        <td>1</td>
+                        <td>John Doe</td>
+                        <td>98%</td>
+                        <td>15</td>
+                    </tr>
+                    <tr class="silver">
+                        <td>2</td>
+                        <td>Jane Smith</td>
+                        <td>95%</td>
+                        <td>14</td>
+                    </tr>
+                    <tr class="bronze">
+                        <td>3</td>
+                        <td>Michael Brown</td>
+                        <td>92%</td>
+                        <td>13</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('performanceChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [{
+                    label: 'Score Progress',
+                    data: [10, 15, 19, 30, 34, 36],
+                    borderColor: '#A97C50',
+                    backgroundColor: 'rgba(169, 124, 80, 0.2)',
+                    borderWidth: 3,
+                    pointBackgroundColor: '#7B4F2A',
+                    pointRadius: 5,
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#5F3D1D',
+                            font: {
+                                size: 14
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        ticks: {
+                            color: '#5F3D1D'
+                        }
+                    },
+                    y: {
+                        ticks: {
+                            color: '#5F3D1D'
+                        },
+                        grid: {
+                            color: 'rgba(95, 61, 29, 0.2)'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+
+

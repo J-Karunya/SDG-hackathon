@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <header class="hero">
+        <nav>
+            <h1>Dashboard</h1>
+            <ul>
+                <li><a href="home page1.html">Home</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="profile-container">
+        <h2 class="profile-title">User Profile</h2>
+    
+        <form action="#" method="POST">
+            <div class="profile-section">
+                <h3>Name</h3>
+                <input type="text" id="name" name="name" value="admin" required>
+            </div>
+    
+            <div class="profile-section">
+                <h3>About</h3>
+                <input type="text" id="about" name="about" value="." required>
+            </div>
+    
+            <div class="profile-section">
+                <h3>Phone Number</h3>
+                <input type="tel" id="phone" name="phone" value="+91 73394 10528" required>
+            </div>
+    
+            <div class="profile-section">
+                <h3>Gmail</h3>
+                <input type="email" id="gmail" name="gmail" value="harish@example.com" required>
+            </div>
+    
+            <div class="profile-section">
+                <h3>Username</h3>
+                <input type="text" id="username" name="username" value="harish_m" required>
+            </div>
+    
+            <button class="logout-btn" type="submit">LOG OUT</button>
+        </form>
+        <p class="logout-info">Chat history on this computer will be cleared when you log out.</p>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+/* Leaderboard Table */
+.leaderboard {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.leaderboard th, .leaderboard td {
+    border: 1px solid var(--muted-brown); /* Muted Brown */
+    padding: 10px;
+    text-align: center;
+}
+
+.leaderboard th {
+    background: var(--deep-red); /* Dark Red */
+    color: var(--off-white); /* Off White */
+    font-size: 16px;
+}
+
+.leaderboard tbody tr:nth-child(odd) {
+    background: var(--off-white); /* Light Beige */
+}
+
+.leaderboard tbody tr:nth-child(even) {
+    background: var(--muted-brown); /* Muted Brown */
+}
+
+/* Leaderboard Rankings */
+.gold {
+    background: gold !important;
+}
+
+.silver {
+    background: silver !important;
+}
+
+.bronze {
+    background: #cd7f32 !important;
+}
+
+/* Performance Chart */
+.chart-container {
+    margin-top: 20px;
+    background: var(--off-white); /* Light Beige */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+}

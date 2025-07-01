@@ -1,0 +1,133 @@
+/* Teacher Profile Styling */
+:root {
+    --off-white: #FFFFFA;
+    --deep-red: #6D213C;
+    --muted-brown: #A18276;
+    --dark-blue: #1C3041;
+    --muted-gray: #868784;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--off-white);
+    color: var(--dark-blue);
+}
+
+/* Navigation Bar */
+.hero {
+    background-color: var(--deep-red);
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.hero nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.hero h1 {
+    color: var(--off-white);
+    font-size: 24px;
+}
+
+.hero ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.hero ul li {
+    margin: 0 10px;
+}
+
+.hero ul li a {
+    text-decoration: none;
+    color: var(--off-white);
+    background-color: var(--muted-brown);
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.hero ul li a:hover {
+    background-color: var(--muted-gray);
+}
+
+/* Profile Container */
+.profile-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: var(--muted-gray);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.profile-title {
+    color: var(--deep-red);
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Profile Section */
+.profile-section {
+    width: 90%;
+    padding: 15px;
+    background: #FFF;
+    border-radius: 8px;
+    border: 2px solid var(--deep-red);
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-section h3 {
+    font-size: 16px;
+    color: var(--deep-red);
+    margin: 0;
+    font-weight: bold;
+}
+
+.profile-section p {
+    font-size: 18px;
+    margin: 5px 0 0;
+    color: var(--muted-brown);
+}
+
+/* Logout Button */
+.logout-btn {
+    width: 90%;
+    background: var(--muted-brown);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    transition: background 0.3s ease;
+    margin-top: 15px;
+}
+
+.logout-btn:hover {
+    background: var(--muted-gray);
+}
+
+/* Logout Info */
+.logout-info {
+    font-size: 14px;
+    color: var(--muted-brown);
+    margin-top: 12px;
+    text-align: center;
+    font-weight: 500;
+}

@@ -1,0 +1,173 @@
+/* Define color scheme */
+:root {
+    --off-white: #FFFFFA; /* Light Beige */
+    --deep-red: #6D213C; /* Dark Red */
+    --muted-brown: #A18276; /* Muted Brown */
+    --dark-blue: #1C3041; /* Dark Blue */
+    --muted-gray: #868784; /* Muted Gray */
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: var(--off-white); /* Light Beige Background */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: var(--deep-red); /* Dark Red Header */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h2 {
+    color: var(--off-white); /* Off White */
+}
+
+/* Navigation Styling */
+nav {
+    display: flex;
+    justify-content: center; /* Aligns items in the center */
+    gap: 15px; /* Space between buttons */
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none; /* Removes bullets */
+    display: flex; /* Aligns items horizontally */
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block; /* Aligns items side by side */
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--off-white); /* Off White */
+    background: var(--muted-brown); /* Muted Brown */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    display: inline-block;
+    text-align: center;
+}
+
+nav a:hover {
+    background: var(--muted-gray); /* Muted Gray on hover */
+}
+
+nav .active {
+    color: var(--muted-brown); /* Muted Brown */
+}
+
+/* Main Content */
+main {
+    padding: 30px;
+}
+
+h1 {
+    font-size: 24px;
+    color: var(--dark-blue); /* Dark Blue */
+}
+
+/* Stats Section */
+.stats {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card i {
+    font-size: 30px;
+    color: var(--muted-brown); /* Muted Brown */
+}
+
+/* Test Button */
+.test-btn {
+    background: var(--muted-brown); /* Muted Brown */
+    color: var(--off-white); /* Off White */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+    margin-top: 20px;
+}
+
+.test-btn:hover {
+    background: var(--muted-gray); /* Muted Gray */
+}
+
+/* Table */
+.recent-tests {
+    margin-top: 60px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background: var(--deep-red); /* Dark Red Header */
+    color: var(--off-white); /* Off White */
+}
+
+tr:nth-child(even) {
+    background: var(--off-white); /* Light Beige */
+}
+
+/* Status Labels */
+.status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.status.excellent {
+    background: #c6f6d5; /* Light Green */
+    color: #2f855a; /* Dark Green */
+}
+
+.status.good {
+    background: #bee3f8; /* Light Blue */
+    color: #3182ce; /* Blue */
+}
+
+.status.average {
+    background: #fefcbf; /* Light Yellow */
+    color: #b7791f; /* Yellow */
+}
+
+.status.needs-improvement {
+    background: #fed7d7; /* Light Red */
+    color: #c53030; /* Red */
+}

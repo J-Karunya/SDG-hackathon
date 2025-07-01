@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructor Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="teacher-dashboard.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
+    <div class="dashboard-container">
+        <h1>Welcome, Instructor</h1>
+        <nav>
+            <ul>
+                <li><a href="#students" class="menu-btn" data-target="students-section"><i class="fas fa-users"></i> Student Performance</a></li>
+                <li><a href="#create-test" class="menu-btn" data-target="create-test-section"><i class="fas fa-file-alt"></i> Create Test</a></li>
+                <li><a href="#feedback" class="menu-btn" data-target="feedback-section"><i class="fas fa-comments"></i> Provide Feedback</a></li>
+                <li><a href="#leaderboard" class="menu-btn" data-target="leaderboard-section"><i class="fas fa-trophy"></i> Leaderboard</a></li>
+                <li><a href="#profile" class="menu-btn" data-target="profile-section"><i class="fas fa-user"></i> Instructor Profile</a></li>
+                <li><a href="#logout" id="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </nav>
+        
+        <section id="students-section" class="content-section card">
+            <h2>Student Performance</h2>
+            <div class="filters">
+                <select id="department-filter" onchange="fetchStudentData()">
+                    <option value="">Select Department</option>
+                    <option value="CS">Computer Science</option>
+                    <option value="EE">Electrical Engineering</option>
+                </select>
+                <select id="year-filter" onchange="fetchStudentData()">
+                    <option value="">Select Year</option>
+                    <option value="3">3rd Year</option>
+                    <option value="4">4th Year</option>
+                </select>
+                <input type="text" id="student-search" placeholder="Search by Name or ID" onkeyup="fetchStudentData()">
+                <button onclick="fetchStudentData()">Search</button>
+                <button onclick="exportToExcel()">Download Excel</button>
+            </div>
+        
+            <table id="student-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Year</th>
+                        <th>Weak Topics</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Student data will be inserted here -->
+                </tbody>
+            </table>
+        </section>
+        
+        
+        <section id="profile-section" class="content-section card" style="display: none;">
+            <h2>Instructor Profile</h2>
+            <iframe src="tprofile.html" style="width: 100%; height: 500px; border: none;"></iframe>
+        </section>
+
+        <section id="leaderboard-section" class="content-section card" style="display: none;">
+            <h2>Leaderboard</h2>
+            <iframe src="leaderboard.html" style="width: 100%; height: 500px; border: none;"></iframe>
+        </section>
+    </div>
+    
+    <script>
+        document.querySelectorAll(".menu-btn").forEach(button => {
+            button.addEventListener("click", function(event) {
+                event.preventDefault();
+                let targetSection = document.getElementById(this.dataset.target);
+                document.querySelectorAll(".content-section").forEach(section => {
+                    section.style.display = "none";
+                });
+                targetSection.style.display = "block";
+            });
+        });
+
+        function searchStudent() {
+            document.getElementById("student-profile").style.display = "block";
+            document.getElementById("student-name").innerText = "John Doe";
+            document.getElementById("student-id").innerText = "123456";
+            document.getElementById("weak-topics").innerText = "Mathematics, Physics";
+        }
+
+        document.getElementById("logout").addEventListener("click", function() {
+            alert("You have been logged out.");
+            window.location.href = "login.html";
+        });
+    </script>
+</body>
+</html>

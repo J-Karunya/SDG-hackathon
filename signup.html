@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <header class="hero">
+        <nav>
+            <h1>Sign Up</h1>
+            <ul>
+                <li><a href="home page1.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="login-container">
+        <h2>Sign Up</h2>
+        <p>Select your role:</p>
+        
+        <div class="role-buttons">
+            <button onclick="showLogin('student')">Student Sign Up</button>
+            <button onclick="showLogin('teacher')">Teacher Sign Up</button>
+        </div>
+
+        <form id="student-login" class="login-form hidden" onsubmit="return offlineStudentLogin(event)">
+            <h3>Student Sign Up</h3>
+            <label for="student-name">Full Name</label>
+            <input type="text" id="student-name" name="student-name" required>
+
+            <label for="student-email">Email</label>
+            <input type="text" id="student-email" name="student-email" required>
+
+            <label for="student-password">Password</label>
+            <input type="password" id="student-password" name="student-password" required>
+
+            <label for="student-confirm-password">Confirm Password</label>
+            <input type="password" id="student-confirm-password" name="student-confirm-password" required>
+
+
+            <button type="submit">Sign Up</button>
+        </form>
+
+        <form id="teacher-login" class="login-form hidden" onsubmit="return offlineTeacherLogin(event)">
+            <h3>Teacher Sign Up</h3>
+            <label for="teacher-name">Full Name</label>
+            <input type="text" id="teacher-name" name="teacher-name" required>
+        
+            <label for="teacher-email">Email</label>
+            <input type="text" id="teacher-email" name="teacher-email" required>
+        
+            <label for="teacher-password">Password</label>
+            <input type="password" id="teacher-password" name="teacher-password" required>
+
+            <label for="teacher-confirm-password">Confirm Password</label>
+            <input type="password" id="teacher-confirm-password" name="teacher-confirm-password" required>
+
+            <label for="teacher-id">Teacher ID No</label>
+            <input type="text" id="teacher-id" name="teacher-id" required>
+
+        
+            <button type="submit">Sign Up</button>
+        </form>
+        
+
+        <p>Already have an account? <a href="login.html">Login here</a></p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Exam Tracker. All rights reserved.</p>
+    </footer>
+
+    <script src="login.js"></script> <!-- Linking JavaScript File -->
+</body>
+</html>

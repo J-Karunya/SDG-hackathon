@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard - Exam Tracker</title>
+    <link rel="stylesheet" href="test.css">
+    <script defer src="leaderboard.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFFFFA;
+            margin: 0;
+            padding: 0;
+        }
+        .leaderboard-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #A18276;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            text-align: center;
+            color: #1C3041;
+        }
+        .leaderboard {
+            width: 100%;
+            border-collapse: collapse;
+            background: #FFFFFA;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .leaderboard th, .leaderboard td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #868784;
+        }
+        .leaderboard tr:hover {
+            background-color: #FFA630;
+            transition: 0.3s;
+        }
+        .gold { background-color: #FFD700; }
+        .silver { background-color: #C0C0C0; }
+        .bronze { background-color: #CD7F32; }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #6D213C;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: transform 0.1s ease-in-out;
+        }
+        button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <nav>
+            <ul>
+                <li><a href="index.html" class="nav-button home-button">Home</a></li>
+                <li><a href="dashboard.html" class="nav-button dashboard-button">Dashboard</a></li>
+                <li><a href="login.html" class="nav-button login-button">Login</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <div class="leaderboard-container">
+        <h2>🏆 Exam Leaderboard</h2>
+        <table class="leaderboard">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>Score</th>
+                    <th>Exams Completed</th>
+                </tr>
+            </thead>
+            <tbody id="leaderboard-body">
+                <tr class="gold">
+                    <td>1</td>
+                    <td>John Doe</td>
+                    <td>98%</td>
+                    <td>15</td>
+                </tr>
+                <tr class="silver">
+                    <td>2</td>
+                    <td>Jane Smith</td>
+                    <td>95%</td>
+                    <td>14</td>
+                </tr>
+                <tr class="bronze">
+                    <td>3</td>
+                    <td>Michael Brown</td>
+                    <td>92%</td>
+                    <td>13</td>
+                </tr>
+            </tbody>
+        </table>
+        <button onclick="updateLeaderboard()">Update Scores</button>
+    </div>
+
+    <footer>
+        <p style="text-align: center;">&copy; 2025 Exam Tracker. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+

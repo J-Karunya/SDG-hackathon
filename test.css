@@ -1,0 +1,146 @@
+:root {
+    --off-white: #FFFFFA;
+    --deep-red: #6D213C;
+    --muted-brown: #A18276;
+    --dark-blue: #1C3041;
+    --muted-gray: #868784;
+    --highlight-orange: #FFA630;
+    --light-background: #EDE7D9;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--off-white);
+    margin: 0;
+    padding: 0;
+    color: var(--dark-blue);
+}
+
+/* Header Section */
+header.hero {
+    background-color: var(--dark-blue);
+    color: var(--off-white);
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* General Button Styles */
+.nav-button {
+    display: inline-block;
+    background: var(--off-white);
+    color: var(--deep-red);
+    border: 2px solid var(--muted-brown);
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: transform 0.1s ease-in-out, background 0.3s, color 0.3s;
+}
+
+/* Home Button */
+.home-button:hover {
+    background-color: var(--deep-red);
+    color: var(--off-white);
+}
+
+/* Dashboard Button */
+.dashboard-button:hover {
+    background-color: var(--deep-red);
+    color: var(--off-white);
+}
+
+/* Login Button */
+.login-button:hover {
+    background-color: var(--deep-red);
+    color: var(--off-white);
+}
+
+/* Click Effect for All Buttons */
+.nav-button:active {
+    transform: scale(0.95);
+}
+
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: var(--off-white);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border: 2px solid var(--muted-brown);
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: var(--off-white);
+    color: var(--deep-red);
+}
+
+/* Leaderboard Container */
+.leaderboard-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: var(--muted-brown);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    color: var(--deep-red);
+    margin-bottom: 20px;
+}
+
+/* Leaderboard Table */
+.leaderboard {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--off-white);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.leaderboard th, .leaderboard td {
+    padding: 15px;
+    border-bottom: 1px solid var(--muted-gray);
+}
+
+.leaderboard th {
+    background-color: var(--dark-blue);
+    color: var(--off-white);
+}
+
+.leaderboard tr:nth-child(even) {
+    background-color: var(--light-background);
+}
+
+.leaderboard tr:hover {
+    background-color: var(--highlight-orange);
+    color: var(--off-white);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: var(--dark-blue);
+    color: var(--off-white);
+    margin-top: 20px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,144 @@
+/* Teacher Profile Styling */
+:root {
+    --off-white: #FFFFFA;
+    --deep-red: #6D213C;
+    --muted-brown: #A18276;
+    --dark-blue: #1C3041;
+    --muted-gray: #868784;
+}
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--off-white); /* Light Beige */
+    color: var(--dark-blue); /* Dark Blue */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: var(--muted-brown); /* Muted Brown */
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    margin: 0;
+    padding: 56px 0px 0px 0px;
+    color: var(--off-white); /* Off White */
+    font-family: cursive;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--off-white); /* Off White */
+    background-color: var(--deep-red); /* Deep Red */
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: var(--muted-gray); /* Muted Gray */
+}
+
+/* Hero Section */
+.hero {
+    background-color: var(--muted-brown); /* Muted Brown */
+    padding: 50px 20px;
+}
+
+.hero h2 {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    font-family: papyrus;
+}
+
+/* Call to Action Button */
+.cta {
+    background-color: var(--deep-red); /* Deep Red */
+    color: var(--off-white); /* Off White */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.cta:hover {
+    background-color: var(--dark-blue); /* Dark Blue */
+}
+
+/* Features Section */
+.features {
+    margin: 30px 0;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.buttons button {
+    background-color: var(--muted-brown); /* Muted Brown */
+    color: var(--off-white); /* Off White */
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: var(--deep-red); /* Deep Red */
+}
+
+/* Info Section */
+.info {
+    padding: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: var(--muted-brown); /* Muted Brown */
+    color: var(--off-white); /* Off White */
+}
+
+/* Profile Image Styling */
+img {
+    position: absolute;
+    top: 60px;  /* Distance from the top */
+    left: 63px; /* Distance from the right */
+    width: 60px; /* Adjust size */
+    height: auto;
+    border-radius: 50%; /* Makes it a perfect circle */
+    object-fit: cover; /* Ensures the image fills the circular area */
+    border: 2px solid var(--off-white); /* Off White Border */
+}
+
+
+
